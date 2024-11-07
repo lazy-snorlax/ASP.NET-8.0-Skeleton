@@ -1,4 +1,4 @@
-# Test Stack for ASP.NET Core Dev
+# Test Stack for ASP.NET Core
 This is a stack for local development with .NET 8.0 in a docker container. The ASP.NET project will fire up on http://localhost:8000. This project is primarily targeted for developing on Linux systems or for those without Visual Studio.
 
 ## Front End
