@@ -24,4 +24,15 @@ services:
       - ./db/data:/var/opt/mssql/data
       - ./db/log:/var/opt/mssql/log
       - ./db/secrets:/var/opt/mssql/secrets
-         
+  vue:
+    build:
+        context: ./vue
+    ports:
+        - 8080:8080
+    env_file:
+        - ./vue/.env.development
+    volumes:
+        - ./vue/:/opt/app
+        # - node_modules:/opt/node_modules
+    user: node
+    tty: true
