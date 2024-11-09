@@ -1,3 +1,5 @@
+*.sln
+
 db/data/*
 db/log/*
 db/secrets/*
