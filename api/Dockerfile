@@ -9,6 +9,7 @@ RUN dotnet build "api.csproj" -c Release -o /app/build
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS dev
 WORKDIR /src
+RUN dotnet tool install --global dotnet-ef
 CMD dotnet watch run --no-launch-profile
 
 FROM build AS publish
