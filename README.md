@@ -20,3 +20,11 @@ Note: This was generated from the Vite init command, and does not mean that this
 In order for data to persist, you must create a db directory in the project root. Run these commands to create the sub-directories needed with the proper permissions for volume sharing the data with MSSQL.
 
 This service should start on http://localhost:1433.
+
+### Running migrations
+To run database migrations, bash into the api container using docker compose exec and run the following:
+```
+dotnet ef migrations add init   # first time only
+dotnet ef database update
+```
+If errors occur, double check the connection string in appsettings.json, and confirm the database is reachable from a Database IDE (Management Studio, BeeKeeper, etc)
